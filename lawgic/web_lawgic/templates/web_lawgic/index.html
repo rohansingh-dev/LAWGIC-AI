@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LawgicAI - Indian Law Assistant</title>
+    <link rel="stylesheet" href="{% static 'web_lawgic/style.css' %}">
+</head>
+<body>
+<div class="main-layout">
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <span class="logo">⚖️</span>
+            <span class="brand">LawgicAI</span>
+        </div>
+        <div class="sidebar-footer">
+            <small>&copy; 2025 LawgicAI</small>
+        </div>
+    </aside>
+    <section class="chat-area">
+        <div class="chat-header">
+            <div class="toggle-group">
+                <span class="toggle-label">Language:</span>
+                <button type="button" id="lang-toggle" class="toggle-btn">English</button>
+            </div>
+        </div>
+        {% if faiss_ready %}
+            <div class="status">Vectorstore is ready. You can ask legal questions below.</div>
+        {% else %}
+            <div class="status error">Vectorstore is missing. Please run: <code>python chatbot/create_memory.py</code></div>
+        {% endif %}
+        <div class="chat-log" id="chat-log"></div>
+        <form class="chat-form" id="chat-form" autocomplete="off">
+            <input type="text" id="chat-input" placeholder="Type your question..." required />
+            <input type="hidden" id="language-select" value="English" />
+            <button type="submit">➤</button>
+        </form>
+    </section>
+</div>
+<script src="{% static 'web_lawgic/main.js' %}"></script>
+<script>
+// Language toggle logic
+const langToggle = document.getElementById('lang-toggle');
+const langInput = document.getElementById('language-select');
+langToggle.addEventListener('click', function() {
+    if (langToggle.textContent === 'English') {
+        langToggle.textContent = 'Hindi';
+        langInput.value = 'Hindi';
+    } else {
+        langToggle.textContent = 'English';
+        langInput.value = 'English';
+    }
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+{% extends 'web_lawgic/base.html' %}
+{% block title %}Features | LawgicAI{% endblock %}
+{% block content %}
+<!-- Hero Section -->
+<section class="py-20 px-4">
+    <div class="max-w-7xl mx-auto text-center">
+        <h1 class="text-5xl font-bold mb-6">
+            <span class="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                Powerful Features
+            </span>
+        </h1>
+        <p class="text-xl text-slate-300 max-w-3xl mx-auto">
+            Discover how LawgicAI revolutionizes legal assistance with cutting-edge AI technology
+        </p>
+    </div>
+</section>
+
+<!-- Features Grid -->
+<section class="py-20 px-4">
+    <div class="max-w-7xl mx-auto">
+        <ul class="features-list grid lg:grid-cols-3 gap-8">
+            <li class="feature-card-large bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-3xl p-10 hover:bg-slate-800/70 hover:border-slate-600 transition-all duration-300 hover:transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/10">
+                <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6">
+                    <i class="fas fa-brain text-2xl text-white"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-4">AI-powered legal Q&A for Indian law</h3>
+                <p class="text-slate-300 mb-6 leading-relaxed">
+                    Our advanced machine learning algorithms are trained on comprehensive Indian legal databases, 
+                    ensuring accurate and contextual responses to your legal queries.
+                </p>
+                <ul class="space-y-2 text-sm text-slate-400">
+                    <li class="flex items-center"><i class="fas fa-check text-green-400 mr-2"></i> Natural Language Processing</li>
+                    <li class="flex items-center"><i class="fas fa-check text-green-400 mr-2"></i> Context-Aware Responses</li>
+                    <li class="flex items-center"><i class="fas fa-check text-green-400 mr-2"></i> Continuous Learning</li>
+                </ul>
+            </li>
+
+            <li class="feature-card-large bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-3xl p-10 hover:bg-slate-800/70 hover:border-slate-600 transition-all duration-300 hover:transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-purple-500/10">
+                <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6">
+                    <i class="fas fa-language text-2xl text-white"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-4">Supports English and Hindi (with translation)</h3>
+                <p class="text-slate-300 mb-6 leading-relaxed">
+                    Communicate seamlessly in English or Hindi with real-time translation capabilities, 
+                    making legal knowledge accessible to everyone.
+                </p>
+                <ul class="space-y-2 text-sm text-slate-400">
+                    <li class="flex items-center"><i class="fas fa-check text-green-400 mr-2"></i> English & Hindi Support</li>
+                    <li class="flex items-center"><i class="fas fa-check text-green-400 mr-2"></i> Real-time Translation</li>
+                    <li class="flex items-center"><i class="fas fa-check text-green-400 mr-2"></i> Cultural Context Understanding</li>
+                </ul>
+            </li>
+
+            <li class="feature-card-large bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-3xl p-10 hover:bg-slate-800/70 hover:border-slate-600 transition-all duration-300 hover:transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-orange-500/10">
+                <div class="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mb-6">
+                    <i class="fas fa-shield-alt text-2xl text-white"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-4">Strict legal prompt enforcement for safe answers</h3>
+                <p class="text-slate-300 mb-6 leading-relaxed">
+                    Advanced safety measures ensure all responses are legally sound and appropriate, 
+                    with strict enforcement of legal guidelines and ethical boundaries.
+                </p>
+                <ul class="space-y-2 text-sm text-slate-400">
+                    <li class="flex items-center"><i class="fas fa-check text-green-400 mr-2"></i> Legal Compliance</li>
+                    <li class="flex items-center"><i class="fas fa-check text-green-400 mr-2"></i> Ethical Guidelines</li>
+                    <li class="flex items-center"><i class="fas fa-check text-green-400 mr-2"></i> Safe Responses</li>
+                </ul>
+            </li>
+
+            <li class="feature-card-large bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-3xl p-10 hover:bg-slate-800/70 hover:border-slate-600 transition-all duration-300 hover:transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-pink-500/10">
+                <div class="w-16 h-16 bg-gradient-to-r from-pink-500 to-purple-500 rounded-2xl flex items-center justify-center mb-6">
+                    <i class="fas fa-palette text-2xl text-white"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-4">Modern, dark-themed interface</h3>
+                <p class="text-slate-300 mb-6 leading-relaxed">
+                    Experience a sleek, modern interface designed for comfort and productivity, 
+                    with a professional dark theme that's easy on the eyes.
+                </p>
+                <ul class="space-y-2 text-sm text-slate-400">
+                    <li class="flex items-center"><i class="fas fa-check text-green-400 mr-2"></i> Dark Theme Design</li>
+                    <li class="flex items-center"><i class="fas fa-check text-green-400 mr-2"></i> Modern UI/UX</li>
+                    <li class="flex items-center"><i class="fas fa-check text-green-400 mr-2"></i> Responsive Layout</li>
+                </ul>
+            </li>
+
+            <li class="feature-card-large bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-3xl p-10 hover:bg-slate-800/70 hover:border-slate-600 transition-all duration-300 hover:transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-teal-500/10">
+                <div class="w-16 h-16 bg-gradient-to-r from-teal-500 to-blue-500 rounded-2xl flex items-center justify-center mb-6">
+                    <i class="fas fa-users text-2xl text-white"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-4">Community and support features</h3>
+                <p class="text-slate-300 mb-6 leading-relaxed">
+                    Join a thriving community of legal professionals and enthusiasts, 
+                    with comprehensive support features and collaborative tools.
+                </p>
+                <ul class="space-y-2 text-sm text-slate-400">
+                    <li class="flex items-center"><i class="fas fa-check text-green-400 mr-2"></i> Community Forums</li>
+                    <li class="flex items-center"><i class="fas fa-check text-green-400 mr-2"></i> Expert Support</li>
+                    <li class="flex items-center"><i class="fas fa-check text-green-400 mr-2"></i> Knowledge Sharing</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-20 px-4 bg-gradient-to-r from-blue-900/30 to-purple-900/30">
+    <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-4xl font-bold mb-6">Experience These Features Today</h2>
+        <p class="text-xl text-slate-300 mb-8">
+            Start your legal journey with LawgicAI and discover the power of AI-driven legal assistance
+        </p>
+        <a href="/chatbot/" class="cta-btn cta-primary text-lg px-8 py-4">
+            <i class="fas fa-rocket mr-2"></i>
+            Chatbot
+        </a>
+    </div>
+</section>
+{% endblock %}

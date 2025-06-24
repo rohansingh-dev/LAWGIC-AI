@@ -1,0 +1,86 @@
+{% extends 'web_lawgic/base.html' %}
+{% block title %}Home | LawgicAI{% endblock %}
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section py-20 px-4 relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-blue-900/20 to-purple-900/20"></div>
+    <div class="max-w-7xl mx-auto relative">
+        <div class="text-center">
+            <div class="inline-flex items-center px-4 py-2 bg-slate-800 rounded-full mb-8 border border-slate-700">
+                <span class="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
+                <span class="text-sm text-slate-300">AI-Powered Legal Assistant</span>
+            </div>
+            
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+                Welcome to <span class="brand-highlight bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">LawgicAI</span>
+            </h1>
+            
+            <p class="subtitle text-xl text-slate-300 mb-12 max-w-3xl mx-auto leading-relaxed">
+                Your trusted AI assistant for Indian legal information.<br>
+                Ask questions, get clear answers, and explore the law in English or Hindi.
+            </p>
+            
+            <div class="home-cta flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
+                <a href="/chatbot/" class="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 transform hover:-translate-y-1">
+                    <i class="fas fa-comments mr-2"></i>
+                    Chatbot
+                </a>
+                <a href="/features/" class="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-slate-600 text-slate-300 font-semibold rounded-2xl hover:border-blue-500 hover:text-white hover:bg-slate-800/50 transition-all duration-300">
+                    <i class="fas fa-play mr-2"></i>
+                    See Features
+                </a>
+            </div>
+
+            <div class="hero-illustration">
+                <div style="font-size: 80px; opacity: 0.8;">⚖️</div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Quick Info Section -->
+<div class="quick-info max-w-4xl mx-auto my-16 p-8 bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-3xl">
+    <h2 class="text-3xl font-bold mb-8 text-center">
+        <span class="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">What is LawgicAI?</span>
+    </h2>
+    <ul class="grid md:grid-cols-2 gap-6">
+        <li class="flex items-center space-x-4 p-4 bg-slate-800/30 rounded-2xl border border-slate-700">
+            <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl flex items-center justify-center">
+                <i class="fas fa-robot text-white"></i>
+            </div>
+            <span class="text-lg">AI-powered assistant for Indian legal information</span>
+        </li>
+        <li class="flex items-center space-x-4 p-4 bg-slate-800/30 rounded-2xl border border-slate-700">
+            <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-xl flex items-center justify-center">
+                <i class="fas fa-balance-scale text-white"></i>
+            </div>
+            <span class="text-lg">Trained on real Indian legal documents and law</span>
+        </li>
+        <li class="flex items-center space-x-4 p-4 bg-slate-800/30 rounded-2xl border border-slate-700">
+            <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-600 rounded-xl flex items-center justify-center">
+                <i class="fas fa-language text-white"></i>
+            </div>
+            <span class="text-lg">Works in English and Hindi (with translation)</span>
+        </li>
+        <li class="flex items-center space-x-4 p-4 bg-slate-800/30 rounded-2xl border border-slate-700">
+            <div class="w-12 h-12 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-xl flex items-center justify-center">
+                <i class="fas fa-user-shield text-white"></i>
+            </div>
+            <span class="text-lg">Private, secure, and does not store your questions</span>
+        </li>
+        <li class="flex items-center space-x-4 p-4 bg-slate-800/30 rounded-2xl border border-slate-700">
+            <div class="w-12 h-12 bg-gradient-to-r from-teal-500 to-blue-500 rounded-xl flex items-center justify-center">
+                <i class="fas fa-comments text-white"></i>
+            </div>
+            <span class="text-lg">Easy-to-use chat interface for instant legal answers</span>
+        </li>
+        <li class="flex items-center space-x-4 p-4 bg-slate-800/30 rounded-2xl border border-slate-700">
+            <div class="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-500 rounded-xl flex items-center justify-center">
+                <i class="fas fa-file-download text-white"></i>
+            </div>
+            <span class="text-lg">Free access to legal resources and document downloads</span>
+        </li>
+    </ul>
+</div>
+{% endblock %}

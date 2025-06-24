@@ -1,0 +1,145 @@
+{% extends 'web_lawgic/base.html' %}
+{% load static %}
+{% block title %}Chatbot | LawgicAI{% endblock %}
+{% block content %}
+<div class="chatbot-layout flex h-screen relative">
+    <!-- Main Chat Section (no sidebar/history) -->
+    <section class="chat-section flex-1 flex flex-col w-full relative">
+        <!-- Language Toggle Floating Top-Right -->
+        <div class="absolute top-6 right-8 z-40 flex items-center space-x-3">
+            <span class="toggle-label text-slate-300 font-medium">Language:</span>
+            <button type="button" id="lang-toggle" class="toggle-btn px-5 py-2 rounded-full font-semibold border-2 border-blue-500 bg-slate-900 text-blue-400 shadow-md hover:bg-blue-500 hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all duration-200">
+                English
+            </button>
+        </div>
+
+        <!-- Chat History Collapsible -->
+        <div class="max-w-4xl mx-auto w-full mt-4 mb-2">
+            <button id="toggle-history" class="w-full text-left px-4 py-2 bg-slate-800 border border-slate-700 rounded-t-2xl text-slate-300 font-semibold focus:outline-none">
+                <i class="fas fa-history mr-2"></i>Show Chat History
+            </button>
+            <div id="chat-history-panel" class="hidden bg-slate-900 border-x border-b border-slate-700 rounded-b-2xl p-4 max-h-64 overflow-y-auto">
+                <div id="chat-history-list" class="space-y-4 text-sm"></div>
+            </div>
+        </div>
+
+        <!-- Chat Log -->
+        <div class="chat-log flex-1 overflow-y-auto p-6 pb-40" id="chat-log" aria-live="polite">
+            <div class="max-w-4xl mx-auto">
+                <!-- Welcome Message -->
+                <div class="text-center mb-8">
+                    <div class="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-balance-scale text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">Welcome to LawgicAI</h3>
+                    <p class="text-slate-400">Ask me anything about Indian law and I'll provide clear, accurate guidance.</p>
+                </div>
+
+                <!-- Sample Questions -->
+                <div class="grid md:grid-cols-2 gap-4 mb-8">
+                    <button class="sample-question w-full text-left p-6 bg-slate-800/50 border border-slate-700 rounded-2xl hover:bg-slate-800 hover:border-slate-600 transition-all duration-300 text-slate-300 hover:text-white" onclick="askSampleQuestion('What are the basic rights of employees in India?')">
+                        <i class="fas fa-users mr-2 text-blue-400"></i>
+                        What are the basic rights of employees in India?
+                    </button>
+                    <button class="sample-question w-full text-left p-6 bg-slate-800/50 border border-slate-700 rounded-2xl hover:bg-slate-800 hover:border-slate-600 transition-all duration-300 text-slate-300 hover:text-white" onclick="askSampleQuestion('How to register a property in India?')">
+                        <i class="fas fa-home mr-2 text-green-400"></i>
+                        How to register a property in India?
+                    </button>
+                    <button class="sample-question w-full text-left p-6 bg-slate-800/50 border border-slate-700 rounded-2xl hover:bg-slate-800 hover:border-slate-600 transition-all duration-300 text-slate-300 hover:text-white" onclick="askSampleQuestion('What is the process for filing a consumer complaint?')">
+                        <i class="fas fa-gavel mr-2 text-purple-400"></i>
+                        What is the process for filing a consumer complaint?
+                    </button>
+                    <button class="sample-question w-full text-left p-6 bg-slate-800/50 border border-slate-700 rounded-2xl hover:bg-slate-800 hover:border-slate-600 transition-all duration-300 text-slate-300 hover:text-white" onclick="askSampleQuestion('How to start a business in India legally?')">
+                        <i class="fas fa-briefcase mr-2 text-orange-400"></i>
+                        How to start a business in India legally?
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chat Form -->
+        <div class="border-t border-slate-700 p-6 bg-slate-900/95 fixed bottom-0 left-0 w-full z-50 shadow-2xl">
+            <div class="max-w-4xl mx-auto">
+                <form class="chat-form flex items-end space-x-4" id="chat-form" autocomplete="off">
+                    <div class="flex-1 relative">
+                        <input type="text" id="chat-input" placeholder="Type your legal question..." required aria-label="Type your legal question" 
+                               class="w-full bg-slate-800 border border-slate-600 rounded-2xl px-6 py-4 pr-12 focus:outline-none focus:border-blue-500 transition-colors duration-200 text-white placeholder-slate-400">
+                        <input type="hidden" id="language-select" value="English" />
+                    </div>
+                    <button type="submit" aria-label="Send" 
+                            class="bg-gradient-to-r from-blue-500 to-purple-600 text-white p-4 rounded-2xl hover:shadow-lg transition-all duration-300 disabled:opacity-50">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+                
+                <div class="chatbot-info text-center mt-4 text-sm text-slate-400">
+                    Powered by AI & real legal data. 
+                    <span class="text-green-400">Safe, private, and always learning.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+// Language toggle logic
+const langToggle = document.getElementById('lang-toggle');
+const langInput = document.getElementById('language-select');
+
+if (langToggle && langInput) {
+    langToggle.addEventListener('click', function() {
+        if (langToggle.textContent.trim() === 'English') {
+            langToggle.textContent = 'Hindi';
+            langInput.value = 'Hindi';
+            document.getElementById('chat-input').placeholder = 'अपना कानूनी प्रश्न यहाँ पूछें...';
+        } else {
+            langToggle.textContent = 'English';
+            langInput.value = 'English';
+            document.getElementById('chat-input').placeholder = 'Type your legal question...';
+        }
+    });
+}
+
+// Chat history logic
+const historyPanel = document.getElementById('chat-history-panel');
+const historyList = document.getElementById('chat-history-list');
+const toggleHistory = document.getElementById('toggle-history');
+let historyVisible = false;
+
+toggleHistory.addEventListener('click', function() {
+    historyVisible = !historyVisible;
+    historyPanel.classList.toggle('hidden', !historyVisible);
+    toggleHistory.innerHTML = `<i class="fas fa-history mr-2"></i>${historyVisible ? 'Hide' : 'Show'} Chat History`;
+    if (historyVisible && historyList.childElementCount === 0) {
+        fetch('/chat_history/')
+            .then(res => res.json())
+            .then(data => {
+                historyList.innerHTML = '';
+                if (data.history && data.history.length > 0) {
+                    data.history.forEach(item => {
+                        const div = document.createElement('div');
+                        div.className = 'bg-slate-800 border border-slate-700 rounded-xl p-3';
+                        div.innerHTML = `<div class='font-semibold text-blue-300 mb-1'>Q: ${item.question}</div><div class='text-green-300 mb-1'>A: ${item.answer}</div><div class='text-xs text-slate-400 text-right'>${item.created_at}</div>`;
+                        historyList.appendChild(div);
+                    });
+                } else {
+                    historyList.innerHTML = '<div class="text-slate-400">No chat history found.</div>';
+                }
+            });
+    }
+});
+
+// Sample question function
+function askSampleQuestion(question) {
+    const chatInput = document.getElementById('chat-input');
+    if (chatInput) {
+        chatInput.value = question;
+        chatInput.focus();
+    }
+}
+</script>
+{% endblock %}
+
+{% block footer %}{% endblock %}

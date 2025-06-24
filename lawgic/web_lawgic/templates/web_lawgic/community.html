@@ -1,0 +1,229 @@
+{% extends 'web_lawgic/base.html' %}
+{% block title %}Lawyers Community | LawgicAI{% endblock %}
+{% block content %}
+<!-- Lawyers Community Section -->
+<section class="py-20 px-4">
+    <div class="max-w-7xl mx-auto">
+        <h1 class="text-5xl font-bold text-center mb-10">
+            <span class="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                Meet Our Lawyers Community
+            </span>
+        </h1>
+        <p class="text-xl text-slate-300 max-w-3xl mx-auto text-center mb-12">
+            Connect with verified legal professionals from our community. Reach out for advice, collaboration, or consultation.
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Person 1 -->
+            <div id="person-1" class="lawyer-card bg-slate-800/60 border border-slate-700 rounded-3xl p-8 flex flex-col items-center text-center shadow-lg hover:bg-slate-800/80 transition-all duration-300">
+                <a href="#person-1"><img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Person 1" class="w-20 h-20 rounded-full mb-4 border-4 border-blue-500 object-cover"></a>
+                <h3 class="text-xl font-semibold mb-1"><a href="#person-1" class="hover:underline">Person 1</a></h3>
+                <div class="text-blue-300 text-sm mb-2">Criminal Law, Civil Litigation</div>
+                <div class="text-slate-400 text-sm mb-4">Delhi, India</div>
+                <div class="flex flex-wrap justify-center gap-2 mb-4">
+                    <span class="bg-blue-700/30 text-blue-200 px-3 py-1 rounded-full text-xs">Criminal</span>
+                    <span class="bg-blue-700/30 text-blue-200 px-3 py-1 rounded-full text-xs">Civil</span>
+                    <span class="bg-blue-700/30 text-blue-200 px-3 py-1 rounded-full text-xs">Litigation</span>
+                </div>
+                <div class="mt-2 text-left w-full bg-slate-900/80 rounded-xl p-4 border border-blue-700">
+                    <div class="flex items-center mb-2"><i class="fas fa-envelope mr-2 text-blue-400"></i> <a href="mailto:person1@example.com" class="text-blue-300 hover:underline">person1@example.com</a></div>
+                    <div class="flex items-center mb-2"><i class="fas fa-phone mr-2 text-green-400"></i> <a href="tel:+91-9876543210" class="text-green-300 hover:underline">+91-9876543210</a></div>
+                    <div class="flex items-center"><i class="fas fa-globe mr-2 text-purple-400"></i> <a href="#" target="_blank" class="text-purple-300 hover:underline">Website</a></div>
+                </div>
+                <a href="mailto:person1@example.com" class="cta-btn secondary w-full mt-3">Contact</a>
+            </div>
+            <!-- Person 2 -->
+            <div id="person-2" class="lawyer-card bg-slate-800/60 border border-slate-700 rounded-3xl p-8 flex flex-col items-center text-center shadow-lg hover:bg-slate-800/80 transition-all duration-300">
+                <a href="#person-2"><img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Person 2" class="w-20 h-20 rounded-full mb-4 border-4 border-blue-500 object-cover"></a>
+                <h3 class="text-xl font-semibold mb-1"><a href="#person-2" class="hover:underline">Person 2</a></h3>
+                <div class="text-blue-300 text-sm mb-2">Family Law, Divorce</div>
+                <div class="text-slate-400 text-sm mb-4">Mumbai, India</div>
+                <div class="flex flex-wrap justify-center gap-2 mb-4">
+                    <span class="bg-blue-700/30 text-blue-200 px-3 py-1 rounded-full text-xs">Family</span>
+                    <span class="bg-blue-700/30 text-blue-200 px-3 py-1 rounded-full text-xs">Divorce</span>
+                    <span class="bg-blue-700/30 text-blue-200 px-3 py-1 rounded-full text-xs">Women Rights</span>
+                </div>
+                <div class="mt-2 text-left w-full bg-slate-900/80 rounded-xl p-4 border border-blue-700">
+                    <div class="flex items-center mb-2"><i class="fas fa-envelope mr-2 text-blue-400"></i> <a href="mailto:person2@example.com" class="text-blue-300 hover:underline">person2@example.com</a></div>
+                    <div class="flex items-center mb-2"><i class="fas fa-phone mr-2 text-green-400"></i> <a href="tel:+91-9123456780" class="text-green-300 hover:underline">+91-9123456780</a></div>
+                    <div class="flex items-center"><i class="fas fa-globe mr-2 text-purple-400"></i> <a href="#" target="_blank" class="text-purple-300 hover:underline">Website</a></div>
+                </div>
+                <a href="mailto:person2@example.com" class="cta-btn secondary w-full mt-3">Contact</a>
+            </div>
+            <!-- Person 3 -->
+            <div id="person-3" class="lawyer-card bg-slate-800/60 border border-slate-700 rounded-3xl p-8 flex flex-col items-center text-center shadow-lg hover:bg-slate-800/80 transition-all duration-300">
+                <a href="#person-3"><img src="https://randomuser.me/api/portraits/men/65.jpg" alt="Person 3" class="w-20 h-20 rounded-full mb-4 border-4 border-blue-500 object-cover"></a>
+                <h3 class="text-xl font-semibold mb-1"><a href="#person-3" class="hover:underline">Person 3</a></h3>
+                <div class="text-blue-300 text-sm mb-2">Corporate Law, Contracts</div>
+                <div class="text-slate-400 text-sm mb-4">Bangalore, India</div>
+                <div class="flex flex-wrap justify-center gap-2 mb-4">
+                    <span class="bg-blue-700/30 text-blue-200 px-3 py-1 rounded-full text-xs">Corporate</span>
+                    <span class="bg-blue-700/30 text-blue-200 px-3 py-1 rounded-full text-xs">Contracts</span>
+                    <span class="bg-blue-700/30 text-blue-200 px-3 py-1 rounded-full text-xs">Startup</span>
+                </div>
+                <div class="mt-2 text-left w-full bg-slate-900/80 rounded-xl p-4 border border-blue-700">
+                    <div class="flex items-center mb-2"><i class="fas fa-envelope mr-2 text-blue-400"></i> <a href="mailto:person3@example.com" class="text-blue-300 hover:underline">person3@example.com</a></div>
+                    <div class="flex items-center mb-2"><i class="fas fa-phone mr-2 text-green-400"></i> <a href="tel:+91-9988776655" class="text-green-300 hover:underline">+91-9988776655</a></div>
+                    <div class="flex items-center"><i class="fas fa-globe mr-2 text-purple-400"></i> <a href="#" target="_blank" class="text-purple-300 hover:underline">Website</a></div>
+                </div>
+                <a href="mailto:person3@example.com" class="cta-btn secondary w-full mt-3">Contact</a>
+            </div>
+            <!-- Person 4 -->
+            <div id="person-4" class="lawyer-card bg-slate-800/60 border border-slate-700 rounded-3xl p-8 flex flex-col items-center text-center shadow-lg hover:bg-slate-800/80 transition-all duration-300">
+                <a href="#person-4"><img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Person 4" class="w-20 h-20 rounded-full mb-4 border-4 border-blue-500 object-cover"></a>
+                <h3 class="text-xl font-semibold mb-1"><a href="#person-4" class="hover:underline">Person 4</a></h3>
+                <div class="text-blue-300 text-sm mb-2">Intellectual Property, Patents</div>
+                <div class="text-slate-400 text-sm mb-4">Chennai, India</div>
+                <div class="flex flex-wrap justify-center gap-2 mb-4">
+                    <span class="bg-blue-700/30 text-blue-200 px-3 py-1 rounded-full text-xs">IPR</span>
+                    <span class="bg-blue-700/30 text-blue-200 px-3 py-1 rounded-full text-xs">Patents</span>
+                    <span class="bg-blue-700/30 text-blue-200 px-3 py-1 rounded-full text-xs">Copyright</span>
+                </div>
+                <div class="mt-2 text-left w-full bg-slate-900/80 rounded-xl p-4 border border-blue-700">
+                    <div class="flex items-center mb-2"><i class="fas fa-envelope mr-2 text-blue-400"></i> <a href="mailto:person4@example.com" class="text-blue-300 hover:underline">person4@example.com</a></div>
+                    <div class="flex items-center mb-2"><i class="fas fa-phone mr-2 text-green-400"></i> <a href="tel:+91-9001122334" class="text-green-300 hover:underline">+91-9001122334</a></div>
+                    <div class="flex items-center"><i class="fas fa-globe mr-2 text-purple-400"></i> <a href="#" target="_blank" class="text-purple-300 hover:underline">Website</a></div>
+                </div>
+                <a href="mailto:person4@example.com" class="cta-btn secondary w-full mt-3">Contact</a>
+            </div>
+            <!-- Person 5 -->
+            <div id="person-5" class="lawyer-card bg-slate-800/60 border border-slate-700 rounded-3xl p-8 flex flex-col items-center text-center shadow-lg hover:bg-slate-800/80 transition-all duration-300">
+                <a href="#person-5"><img src="https://randomuser.me/api/portraits/women/55.jpg" alt="Person 5" class="w-20 h-20 rounded-full mb-4 border-4 border-blue-500 object-cover"></a>
+                <h3 class="text-xl font-semibold mb-1"><a href="#person-5" class="hover:underline">Person 5</a></h3>
+                <div class="text-blue-300 text-sm mb-2">Tax Law, GST</div>
+                <div class="text-slate-400 text-sm mb-4">Pune, India</div>
+                <div class="flex flex-wrap justify-center gap-2 mb-4">
+                    <span class="bg-blue-700/30 text-blue-200 px-3 py-1 rounded-full text-xs">Tax</span>
+                    <span class="bg-blue-700/30 text-blue-200 px-3 py-1 rounded-full text-xs">GST</span>
+                    <span class="bg-blue-700/30 text-blue-200 px-3 py-1 rounded-full text-xs">Finance</span>
+                </div>
+                <div class="mt-2 text-left w-full bg-slate-900/80 rounded-xl p-4 border border-blue-700">
+                    <div class="flex items-center mb-2"><i class="fas fa-envelope mr-2 text-blue-400"></i> <a href="mailto:person5@example.com" class="text-blue-300 hover:underline">person5@example.com</a></div>
+                    <div class="flex items-center mb-2"><i class="fas fa-phone mr-2 text-green-400"></i> <a href="tel:+91-9011223344" class="text-green-300 hover:underline">+91-9011223344</a></div>
+                    <div class="flex items-center"><i class="fas fa-globe mr-2 text-purple-400"></i> <a href="#" target="_blank" class="text-purple-300 hover:underline">Website</a></div>
+                </div>
+                <a href="mailto:person5@example.com" class="cta-btn secondary w-full mt-3">Contact</a>
+            </div>
+            <!-- Person 6 -->
+            <div id="person-6" class="lawyer-card bg-slate-800/60 border border-slate-700 rounded-3xl p-8 flex flex-col items-center text-center shadow-lg hover:bg-slate-800/80 transition-all duration-300">
+                <a href="#person-6"><img src="https://randomuser.me/api/portraits/men/77.jpg" alt="Person 6" class="w-20 h-20 rounded-full mb-4 border-4 border-blue-500 object-cover"></a>
+                <h3 class="text-xl font-semibold mb-1"><a href="#person-6" class="hover:underline">Person 6</a></h3>
+                <div class="text-blue-300 text-sm mb-2">Environmental Law</div>
+                <div class="text-slate-400 text-sm mb-4">Ahmedabad, India</div>
+                <div class="flex flex-wrap justify-center gap-2 mb-4">
+                    <span class="bg-blue-700/30 text-blue-200 px-3 py-1 rounded-full text-xs">Environment</span>
+                    <span class="bg-blue-700/30 text-blue-200 px-3 py-1 rounded-full text-xs">Sustainability</span>
+                </div>
+                <div class="mt-2 text-left w-full bg-slate-900/80 rounded-xl p-4 border border-blue-700">
+                    <div class="flex items-center mb-2"><i class="fas fa-envelope mr-2 text-blue-400"></i> <a href="mailto:person6@example.com" class="text-blue-300 hover:underline">person6@example.com</a></div>
+                    <div class="flex items-center mb-2"><i class="fas fa-phone mr-2 text-green-400"></i> <a href="tel:+91-9090909090" class="text-green-300 hover:underline">+91-9090909090</a></div>
+                    <div class="flex items-center"><i class="fas fa-globe mr-2 text-purple-400"></i> <a href="#" target="_blank" class="text-purple-300 hover:underline">Website</a></div>
+                </div>
+                <a href="mailto:person6@example.com" class="cta-btn secondary w-full mt-3">Contact</a>
+            </div>
+            <!-- Person 7 -->
+            <div id="person-7" class="lawyer-card bg-slate-800/60 border border-slate-700 rounded-3xl p-8 flex flex-col items-center text-center shadow-lg hover:bg-slate-800/80 transition-all duration-300">
+                <a href="#person-7"><img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Person 7" class="w-20 h-20 rounded-full mb-4 border-4 border-blue-500 object-cover"></a>
+                <h3 class="text-xl font-semibold mb-1"><a href="#person-7" class="hover:underline">Person 7</a></h3>
+                <div class="text-blue-300 text-sm mb-2">Labour Law, Employment</div>
+                <div class="text-slate-400 text-sm mb-4">Hyderabad, India</div>
+                <div class="flex flex-wrap justify-center gap-2 mb-4">
+                    <span class="bg-blue-700/30 text-blue-200 px-3 py-1 rounded-full text-xs">Labour</span>
+                    <span class="bg-blue-700/30 text-blue-200 px-3 py-1 rounded-full text-xs">Employment</span>
+                </div>
+                <div class="mt-2 text-left w-full bg-slate-900/80 rounded-xl p-4 border border-blue-700">
+                    <div class="flex items-center mb-2"><i class="fas fa-envelope mr-2 text-blue-400"></i> <a href="mailto:person7@example.com" class="text-blue-300 hover:underline">person7@example.com</a></div>
+                    <div class="flex items-center mb-2"><i class="fas fa-phone mr-2 text-green-400"></i> <a href="tel:+91-9888777666" class="text-green-300 hover:underline">+91-9888777666</a></div>
+                    <div class="flex items-center"><i class="fas fa-globe mr-2 text-purple-400"></i> <a href="#" target="_blank" class="text-purple-300 hover:underline">Website</a></div>
+                </div>
+                <a href="mailto:person7@example.com" class="cta-btn secondary w-full mt-3">Contact</a>
+            </div>
+            <!-- Person 8 -->
+            <div id="person-8" class="lawyer-card bg-slate-800/60 border border-slate-700 rounded-3xl p-8 flex flex-col items-center text-center shadow-lg hover:bg-slate-800/80 transition-all duration-300">
+                <a href="#person-8"><img src="https://randomuser.me/api/portraits/men/81.jpg" alt="Person 8" class="w-20 h-20 rounded-full mb-4 border-4 border-blue-500 object-cover"></a>
+                <h3 class="text-xl font-semibold mb-1"><a href="#person-8" class="hover:underline">Person 8</a></h3>
+                <div class="text-blue-300 text-sm mb-2">Property Law, Real Estate</div>
+                <div class="text-slate-400 text-sm mb-4">Kolkata, India</div>
+                <div class="flex flex-wrap justify-center gap-2 mb-4">
+                    <span class="bg-blue-700/30 text-blue-200 px-3 py-1 rounded-full text-xs">Property</span>
+                    <span class="bg-blue-700/30 text-blue-200 px-3 py-1 rounded-full text-xs">Real Estate</span>
+                </div>
+                <div class="mt-2 text-left w-full bg-slate-900/80 rounded-xl p-4 border border-blue-700">
+                    <div class="flex items-center mb-2"><i class="fas fa-envelope mr-2 text-blue-400"></i> <a href="mailto:person8@example.com" class="text-blue-300 hover:underline">person8@example.com</a></div>
+                    <div class="flex items-center mb-2"><i class="fas fa-phone mr-2 text-green-400"></i> <a href="tel:+91-9009988776" class="text-green-300 hover:underline">+91-9009988776</a></div>
+                    <div class="flex items-center"><i class="fas fa-globe mr-2 text-purple-400"></i> <a href="#" target="_blank" class="text-purple-300 hover:underline">Website</a></div>
+                </div>
+                <a href="mailto:person8@example.com" class="cta-btn secondary w-full mt-3">Contact</a>
+            </div>
+            <!-- Person 9 -->
+            <div id="person-9" class="lawyer-card bg-slate-800/60 border border-slate-700 rounded-3xl p-8 flex flex-col items-center text-center shadow-lg hover:bg-slate-800/80 transition-all duration-300">
+                <a href="#person-9"><img src="https://randomuser.me/api/portraits/women/90.jpg" alt="Person 9" class="w-20 h-20 rounded-full mb-4 border-4 border-blue-500 object-cover"></a>
+                <h3 class="text-xl font-semibold mb-1"><a href="#person-9" class="hover:underline">Person 9</a></h3>
+                <div class="text-blue-300 text-sm mb-2">Consumer Law, Arbitration</div>
+                <div class="text-slate-400 text-sm mb-4">Jaipur, India</div>
+                <div class="flex flex-wrap justify-center gap-2 mb-4">
+                    <span class="bg-blue-700/30 text-blue-200 px-3 py-1 rounded-full text-xs">Consumer</span>
+                    <span class="bg-blue-700/30 text-blue-200 px-3 py-1 rounded-full text-xs">Arbitration</span>
+                </div>
+                <div class="mt-2 text-left w-full bg-slate-900/80 rounded-xl p-4 border border-blue-700">
+                    <div class="flex items-center mb-2"><i class="fas fa-envelope mr-2 text-blue-400"></i> <a href="mailto:person9@example.com" class="text-blue-300 hover:underline">person9@example.com</a></div>
+                    <div class="flex items-center mb-2"><i class="fas fa-phone mr-2 text-green-400"></i> <a href="tel:+91-9112233445" class="text-green-300 hover:underline">+91-9112233445</a></div>
+                    <div class="flex items-center"><i class="fas fa-globe mr-2 text-purple-400"></i> <a href="#" target="_blank" class="text-purple-300 hover:underline">Website</a></div>
+                </div>
+                <a href="mailto:person9@example.com" class="cta-btn secondary w-full mt-3">Contact</a>
+            </div>
+            <!-- Person 10 -->
+            <div id="person-10" class="lawyer-card bg-slate-800/60 border border-slate-700 rounded-3xl p-8 flex flex-col items-center text-center shadow-lg hover:bg-slate-800/80 transition-all duration-300">
+                <a href="#person-10"><img src="https://randomuser.me/api/portraits/men/99.jpg" alt="Person 10" class="w-20 h-20 rounded-full mb-4 border-4 border-blue-500 object-cover"></a>
+                <h3 class="text-xl font-semibold mb-1"><a href="#person-10" class="hover:underline">Person 10</a></h3>
+                <div class="text-blue-300 text-sm mb-2">Cyber Law, IT Law</div>
+                <div class="text-slate-400 text-sm mb-4">Noida, India</div>
+                <div class="flex flex-wrap justify-center gap-2 mb-4">
+                    <span class="bg-blue-700/30 text-blue-200 px-3 py-1 rounded-full text-xs">Cyber</span>
+                    <span class="bg-blue-700/30 text-blue-200 px-3 py-1 rounded-full text-xs">IT</span>
+                    <span class="bg-blue-700/30 text-blue-200 px-3 py-1 rounded-full text-xs">Technology</span>
+                </div>
+                <div class="mt-2 text-left w-full bg-slate-900/80 rounded-xl p-4 border border-blue-700">
+                    <div class="flex items-center mb-2"><i class="fas fa-envelope mr-2 text-blue-400"></i> <a href="mailto:person10@example.com" class="text-blue-300 hover:underline">person10@example.com</a></div>
+                    <div class="flex items-center mb-2"><i class="fas fa-phone mr-2 text-green-400"></i> <a href="tel:+91-9001234567" class="text-green-300 hover:underline">+91-9001234567</a></div>
+                    <div class="flex items-center"><i class="fas fa-globe mr-2 text-purple-400"></i> <a href="#" target="_blank" class="text-purple-300 hover:underline">Website</a></div>
+                </div>
+                <a href="mailto:person10@example.com" class="cta-btn secondary w-full mt-3">Contact</a>
+            </div>
+            <!-- Person 11 -->
+            <div id="person-11" class="lawyer-card bg-slate-800/60 border border-slate-700 rounded-3xl p-8 flex flex-col items-center text-center shadow-lg hover:bg-slate-800/80 transition-all duration-300">
+                <a href="#person-11"><img src="https://randomuser.me/api/portraits/men/11.jpg" alt="Person 11" class="w-20 h-20 rounded-full mb-4 border-4 border-blue-500 object-cover"></a>
+                <h3 class="text-xl font-semibold mb-1"><a href="#person-11" class="hover:underline">Person 11</a></h3>
+                <div class="text-blue-300 text-sm mb-2">Banking Law, Finance</div>
+                <div class="text-slate-400 text-sm mb-4">Lucknow, India</div>
+                <div class="flex flex-wrap justify-center gap-2 mb-4">
+                    <span class="bg-blue-700/30 text-blue-200 px-3 py-1 rounded-full text-xs">Banking</span>
+                    <span class="bg-blue-700/30 text-blue-200 px-3 py-1 rounded-full text-xs">Finance</span>
+                </div>
+                <div class="mt-2 text-left w-full bg-slate-900/80 rounded-xl p-4 border border-blue-700">
+                    <div class="flex items-center mb-2"><i class="fas fa-envelope mr-2 text-blue-400"></i> <a href="mailto:person11@example.com" class="text-blue-300 hover:underline">person11@example.com</a></div>
+                    <div class="flex items-center mb-2"><i class="fas fa-phone mr-2 text-green-400"></i> <a href="tel:+91-9001112233" class="text-green-300 hover:underline">+91-9001112233</a></div>
+                    <div class="flex items-center"><i class="fas fa-globe mr-2 text-purple-400"></i> <a href="#" target="_blank" class="text-purple-300 hover:underline">Website</a></div>
+                </div>
+                <a href="mailto:person11@example.com" class="cta-btn secondary w-full mt-3">Contact</a>
+            </div>
+            <!-- Person 12 -->
+            <div id="person-12" class="lawyer-card bg-slate-800/60 border border-slate-700 rounded-3xl p-8 flex flex-col items-center text-center shadow-lg hover:bg-slate-800/80 transition-all duration-300">
+                <a href="#person-12"><img src="https://randomuser.me/api/portraits/women/12.jpg" alt="Person 12" class="w-20 h-20 rounded-full mb-4 border-4 border-blue-500 object-cover"></a>
+                <h3 class="text-xl font-semibold mb-1"><a href="#person-12" class="hover:underline">Person 12</a></h3>
+                <div class="text-blue-300 text-sm mb-2">Immigration Law</div>
+                <div class="text-slate-400 text-sm mb-4">Goa, India</div>
+                <div class="flex flex-wrap justify-center gap-2 mb-4">
+                    <span class="bg-blue-700/30 text-blue-200 px-3 py-1 rounded-full text-xs">Immigration</span>
+                    <span class="bg-blue-700/30 text-blue-200 px-3 py-1 rounded-full text-xs">Visa</span>
+                </div>
+                <div class="mt-2 text-left w-full bg-slate-900/80 rounded-xl p-4 border border-blue-700">
+                    <div class="flex items-center mb-2"><i class="fas fa-envelope mr-2 text-blue-400"></i> <a href="mailto:person12@example.com" class="text-blue-300 hover:underline">person12@example.com</a></div>
+                    <div class="flex items-center mb-2"><i class="fas fa-phone mr-2 text-green-400"></i> <a href="tel:+91-9002223344" class="text-green-300 hover:underline">+91-9002223344</a></div>
+                    <div class="flex items-center"><i class="fas fa-globe mr-2 text-purple-400"></i> <a href="#" target="_blank" class="text-purple-300 hover:underline">Website</a></div>
+                </div>
+                <a href="mailto:person12@example.com" class="cta-btn secondary w-full mt-3">Contact</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,106 @@
+{% extends 'web_lawgic/base.html' %}
+{% block title %}About | LawgicAI{% endblock %}
+{% block content %}
+<!-- Why Us Section -->
+<section class="py-20 px-4 bg-slate-800/40">
+    <div class="max-w-5xl mx-auto rounded-3xl border border-slate-700 p-10 text-center shadow-xl">
+        <h2 class="text-4xl font-bold mb-8 bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">Why Us?</h2>
+        <div class="grid md:grid-cols-2 gap-8 text-left">
+            <div class="flex items-start gap-4">
+                <span class="text-green-400 text-3xl"><i class="fas fa-bolt"></i></span>
+                <div>
+                    <h3 class="font-semibold text-xl mb-2">Instant, Reliable Answers</h3>
+                    <p class="text-slate-300">Get context-aware legal responses in seconds, powered by advanced AI and a curated legal knowledge base.</p>
+                </div>
+            </div>
+            <div class="flex items-start gap-4">
+                <span class="text-blue-400 text-3xl"><i class="fas fa-language"></i></span>
+                <div>
+                    <h3 class="font-semibold text-xl mb-2">Bilingual Support</h3>
+                    <p class="text-slate-300">Seamlessly ask questions in English or Hindi, with accurate translation and legal context for both languages.</p>
+                </div>
+            </div>
+            <div class="flex items-start gap-4">
+                <span class="text-purple-400 text-3xl"><i class="fas fa-user-shield"></i></span>
+                <div>
+                    <h3 class="font-semibold text-xl mb-2">Privacy & Security</h3>
+                    <p class="text-slate-300">Your queries are confidential. We never store personal data or share your questions with third parties.</p>
+                </div>
+            </div>
+            <div class="flex items-start gap-4">
+                <span class="text-yellow-400 text-3xl"><i class="fas fa-users"></i></span>
+                <div>
+                    <h3 class="font-semibold text-xl mb-2">Community Driven</h3>
+                    <p class="text-slate-300">Join a growing community of legal experts, students, and citizens working together to make law accessible.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Comparison Table: LawgicAI vs Human Legal Advisor -->
+<section class="py-12 px-4">
+    <div class="max-w-5xl mx-auto">
+        <h2 class="text-3xl font-bold mb-8 text-center bg-gradient-to-r from-blue-400 to-green-400 bg-clip-text text-transparent">LawgicAI vs Human Legal Advisor</h2>
+        <div class="overflow-x-auto">
+            <table class="min-w-full bg-slate-800 border border-slate-700 rounded-2xl text-left shadow-xl">
+                <thead>
+                    <tr class="bg-slate-900">
+                        <th class="py-4 px-6 font-semibold text-lg text-slate-200">Aspect</th>
+                        <th class="py-4 px-6 font-semibold text-lg text-green-400">LawgicAI (AI)</th>
+                        <th class="py-4 px-6 font-semibold text-lg text-yellow-400">Human Legal Advisor</th>
+                    </tr>
+                </thead>
+                <tbody class="text-slate-300">
+                    <tr class="border-t border-slate-700">
+                        <td class="py-3 px-6 text-slate-200">Availability</td>
+                        <td class="py-3 px-6 text-green-400 font-semibold">24/7, instant responses</td>
+                        <td class="py-3 px-6 text-red-400 font-semibold">Business hours, by appointment</td>
+                    </tr>
+                    <tr class="border-t border-slate-700 bg-slate-800/60">
+                        <td class="py-3 px-6 text-slate-200">Cost</td>
+                        <td class="py-3 px-6 text-green-400 font-semibold">Free or low-cost</td>
+                        <td class="py-3 px-6 text-red-400 font-semibold">Hourly or per-consultation fees</td>
+                    </tr>
+                    <tr class="border-t border-slate-700">
+                        <td class="py-3 px-6 text-slate-200">Speed</td>
+                        <td class="py-3 px-6 text-green-400 font-semibold">Seconds</td>
+                        <td class="py-3 px-6 text-red-400 font-semibold">Hours to days</td>
+                    </tr>
+                    <tr class="border-t border-slate-700 bg-slate-800/60">
+                        <td class="py-3 px-6 text-slate-200">Personalization</td>
+                        <td class="py-3 px-6 text-red-400 font-semibold">General, based on data and context</td>
+                        <td class="py-3 px-6 text-green-400 font-semibold">Highly personalized, can handle complex situations</td>
+                    </tr>
+                    <tr class="border-t border-slate-700">
+                        <td class="py-3 px-6 text-slate-200">Legal Document Drafting</td>
+                        <td class="py-3 px-6 text-red-400 font-semibold">Basic guidance, templates</td>
+                        <td class="py-3 px-6 text-green-400 font-semibold">Custom, case-specific drafting</td>
+                    </tr>
+                    <tr class="border-t border-slate-700 bg-slate-800/60">
+                        <td class="py-3 px-6 text-slate-200">Jurisdiction Knowledge</td>
+                        <td class="py-3 px-6 text-green-400 font-semibold">Indian law, based on available data</td>
+                        <td class="py-3 px-6 text-green-400 font-semibold">Can interpret local, state, and national laws in detail</td>
+                    </tr>
+                    <tr class="border-t border-slate-700">
+                        <td class="py-3 px-6 text-slate-200">Confidentiality</td>
+                        <td class="py-3 px-6 text-green-400 font-semibold">No personal data stored or shared</td>
+                        <td class="py-3 px-6 text-green-400 font-semibold">Bound by professional ethics and law</td>
+                    </tr>
+                    <tr class="border-t border-slate-700 bg-slate-800/60">
+                        <td class="py-3 px-6 text-slate-200">Representation in Court</td>
+                        <td class="py-3 px-6 text-red-400 font-semibold">Not possible</td>
+                        <td class="py-3 px-6 text-green-400 font-semibold">Can represent clients in legal proceedings</td>
+                    </tr>
+                    <tr class="border-t border-slate-700">
+                        <td class="py-3 px-6 text-slate-200">Best For</td>
+                        <td class="py-3 px-6 text-green-400 font-semibold">Quick answers, general guidance, document search</td>
+                        <td class="py-3 px-6 text-green-400 font-semibold">Complex cases, legal disputes, in-depth advice</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="text-slate-400 text-sm mt-4">Note: LawgicAI is for informational purposes and not a substitute for professional legal advice or representation.</p>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

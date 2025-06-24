@@ -1,4 +1,3 @@
-# Django manage.py for Lawgic Unified
 import os
 import sys
 

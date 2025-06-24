@@ -1,72 +1,136 @@
-# Lawgic Unified Project
+# LawgicAI
 
-Lawgic Unified is an AI-powered legal Q&A platform combining a Django web backend and a Streamlit-based chatbot UI. Both interfaces use a shared vectorstore and data folder for seamless, consistent answers.
-
-## Features
-- **Unified backend:** Django web app and Streamlit chatbot share the same vectorstore and legal data.
-- **RAG (Retrieval-Augmented Generation):** Answers are grounded in your uploaded legal PDFs.
-- **NVIDIA LLM API:** Uses NVIDIA's LLM API for all legal question answering (no HuggingFace LLM required for LLM).
-- **Multi-language support:** English and Hindi (translation if HuggingFace API key is set).
-- **Easy extensibility:** Add more legal PDFs to improve answer quality.
-
-## Setup
-
-1. **Install dependencies**
-   ```bash
-   pip install -r requirements.txt
-   ```
-2. **Add your legal PDFs**
-   - Place high-quality legal PDFs (laws, case studies, government guides, etc.) in the `data/` folder.
-3. **Create or update the vectorstore**
-   ```bash
-   python chatbot/create_memory.py
-   ```
-   - Re-run this command every time you add new PDFs.
-4. **Configure API keys**
-   - Copy `.env.example` to `.env` and set your keys:
-     - `NVIDIA_API_KEY` (required for LLM)
-     - `HF_TOKEN` (optional, for translation)
-5. **Run the Django web app**
-   ```bash
-   cd lawgic
-   python manage.py runserver
-   ```
-   - Access at [http://localhost:8000/](http://localhost:8000/)
-6. **(Optional) Run the Streamlit chatbot**
-   ```bash
-   streamlit run chatbot/chatbot.py
-   ```
-
-## Configuration
-- `.env` file in the project root holds your API keys.
-- Both Django and Streamlit use the same vectorstore and data.
-
-## Usage
-- Ask legal questions via the web UI or Streamlit chatbot.
-- Answers are based on your uploaded PDFs and NVIDIA LLM.
-- Use the language selector for English or Hindi.
-
-## Best Practices
-- **Add more legal data:** The more legal PDFs you add, the better the answers.
-- **Keep your vectorstore up to date:** Always re-run the vectorstore creation script after adding new data.
-- **Use open-access models:** For best compatibility and no API restrictions.
-- **Review and improve prompts:** Prompts are tuned for safety and clarity, but you can further refine them for your needs.
-
-## Project Structure
-- `data/` — Your legal PDFs
-- `vectorstore/db_faiss/` — FAISS vector index
-- `chatbot/` — Scripts for vectorstore creation and Streamlit UI
-- `lawgic/` — Django backend and chatbot UI
+LawgicAI is an AI-powered legal assistant focused on Indian law. It provides instant, context-aware answers to legal questions, document search, and multilingual support, all with a modern web interface.
 
 ---
-**Note:** Both Django and Streamlit chatbots are fully supported and share the same backend data and vectorstore.
 
-## Changes & API Info
-- **NVIDIA LLM API** via `langchain-nvidia-ai-endpoints` is now used for all legal question answering.
-- Add your NVIDIA API key to `.env` as `NVIDIA_API_KEY`.
-- See [NVIDIA LLM API docs](https://docs.api.nvidia.com/nim/reference/llm-apis) for more info.
+## 🚀 Features
+- **Instant Legal Q&A**: Get answers to your legal questions based on Indian law, powered by advanced AI and real legal documents.
+- **Multilingual Support**: Ask questions in English or Hindi. Switch language instantly in the chatbot UI.
+- **PDF Document Ingestion & Search**: Upload and search Indian legal PDFs. The system indexes and retrieves relevant content for your queries.
+- **User Chat History**: Authenticated users have their chat history saved and can view past questions and answers.
+- **Offline Translation**: Uses Argos Translate for secure, offline translation (Python 3.10/3.11 required).
+- **Modern Web UI**: Responsive, accessible interface built with Django and Tailwind CSS.
+- **Community & Contact Pages**: Connect with legal professionals and the LawgicAI team.
 
-## Troubleshooting
-- If you see errors about missing API keys, check your `.env` file.
-- If answers seem outdated, re-run the vectorstore creation script after adding new PDFs.
-- For any issues with dependencies, ensure your Python version is compatible and all packages are installed from `requirements.txt`.
+---
+
+## 🛠️ Tech Stack
+- **Backend**: Django 5, Python 3.10/3.11
+- **AI/ML**: LangChain, FAISS, HuggingFace Transformers
+- **Vector Store**: FAISS (local, fast retrieval)
+- **Translation**: Argos Translate (offline, privacy-friendly)
+- **Frontend**: Tailwind CSS, FontAwesome, Responsive HTML
+
+---
+
+## ⚡ Quickstart
+
+### 1. Prerequisites
+- Python 3.10 or 3.11 (required for Argos Translate)
+- Git
+
+### 2. Clone the Repository
+```sh
+git clone <your-repo-url>
+cd lawgic_unified
+```
+
+### 3. Create and Activate a Virtual Environment
+```sh
+python3.11 -m venv venv311
+venv311\Scripts\activate  # On Windows
+# or
+source venv311/bin/activate  # On Linux/Mac
+```
+
+### 4. Install Dependencies
+```sh
+pip install -r requirements.txt
+```
+
+### 5. Environment Variables
+Create a `.env` file in the project root with your HuggingFace and NVIDIA API keys:
+```
+HF_TOKEN="your_huggingface_token"
+NVIDIA_API_KEY="your_nvidia_api_key"
+```
+
+### 6. Database Migrations
+```sh
+python lawgic/manage.py migrate
+```
+
+### 7. Ingest Legal PDFs (Optional, for document search)
+```sh
+python chatbot/create_memory.py
+```
+
+### 8. Run the Development Server
+```sh
+python lawgic/manage.py runserver
+```
+
+---
+
+## 🖥️ Usage
+- Access the app at *http://127.0.0.1:8000/* (When host locally)**
+- Use the chatbot for legal Q&A (English/Hindi)
+- View your chat history (collapsible section in chatbot page)
+- Download legal documents from the files section
+- Explore features, community, and contact pages
+
+---
+
+## 📝 Project Structure
+```
+lawgic_unified/
+├── chatbot/                # PDF ingestion and vectorstore creation
+├── data/                   # Legal PDF files
+├── lawgic/                 # Django project
+│   ├── lawgic/             # Django settings, URLs
+│   └── web_lawgic/         # Main app: views, templates, models
+├── vectorstore/            # FAISS vector index
+├── requirements.txt        # Python dependencies
+├── README.md               # Project documentation
+└── .env                    # API keys (not committed)
+```
+
+---
+
+## 🌐 Translation
+- Uses Argos Translate for offline, secure translation (Python 3.10/3.11 only)
+- First translation may take time as language models are downloaded automatically
+
+---
+
+## 🔒 Security & Privacy
+- All chat history is stored locally and only accessible to the authenticated user
+- No personal data is shared with third parties
+- Translation and vector search are performed offline where possible
+
+---
+
+## 📄 License
+This project is open source and available under the MIT License.
+
+---
+
+## 🤝 Contributing
+Pull requests and suggestions are welcome! Please open an issue or submit a PR.
+
+---
+
+## 🙏 Acknowledgements
+- [Django](https://www.djangoproject.com/)
+- [LangChain](https://www.langchain.com/)
+- [HuggingFace](https://huggingface.co/)
+- [FAISS](https://github.com/facebookresearch/faiss)
+- [Argos Translate](https://www.argosopentech.com/)
+- [NividaNim](https://build.nvidia.com/)
+- [Tailwind CSS](https://tailwindcss.com/)
+
+---
+
+For questions or support, contact the LawgicAI Dev Team via the Contact page.
+

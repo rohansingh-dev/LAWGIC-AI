@@ -74,7 +74,7 @@ python lawgic/manage.py runserver
 ---
 
 ## 🖥️ Usage
-- Access the app at *http://127.0.0.1:8000/* (When host locally)**
+- Access the app at *http://127.0.0.1:8000/* **(When host locally)**
 - Use the chatbot for legal Q&A (English/Hindi)
 - View your chat history (collapsible section in chatbot page)
 - Download legal documents from the files section

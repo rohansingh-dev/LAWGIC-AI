@@ -131,6 +131,5 @@ Pull requests and suggestions are welcome! Please open an issue or submit a PR.
 - [Tailwind CSS](https://tailwindcss.com/)
 
 ---
-
-For questions or support, contact the LawgicAI Dev Team via the Contact page.
-
+## Credits
+[Yuvraj Kumar](https://github.com/yuvraj-kumar-dev) - **This project is based on the original work by Yuvraj. I’ve built upon it by refining certain features and making additional enhancements.**

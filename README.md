@@ -84,7 +84,7 @@ python lawgic/manage.py runserver
 
 ## 📝 Project Structure
 ```
-lawgic_unified/
+lawgic_ai/
 ├── chatbot/                # PDF ingestion and vectorstore creation
 ├── data/                   # Legal PDF files
 ├── lawgic/                 # Django project
